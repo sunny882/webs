@@ -3,6 +3,7 @@ import Cards from "./Cards";
 import Hukamnama from "./Hukamnama";
 import PanjTakht from "./PanjTakht";
 import { useNavigate } from "react-router-dom";
+import Nitnem from "./Nitnem";
 
 export default function Main() {
   let nav = useNavigate();
@@ -14,7 +15,7 @@ export default function Main() {
             <Cards />
           </div>
           <div className="shadow p-3 mb-2 ms-1 bg-body rounded">
-            <PanjTakht />
+            <Nitnem />
           </div>
         </div>
         <div className="col-md-5 col-sm-12">

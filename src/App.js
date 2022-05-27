@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div>
+    <div style={{ fontFamily: "Andale Mono, monospace" }}>
       <Router>
         <div className="navbar">
           <Navbar />

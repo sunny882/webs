@@ -2,6 +2,15 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
+  var date = new Date();
+  var hours = date.getHours();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? "pm" : "am";
+  hours = hours % 12;
+  hours = hours ? hours : 12; // the hour '0' should be '12'
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  var strTime = hours + ":" + minutes + " " + ampm;
+  var date = date.toDateString();
   let nav = useNavigate();
   return (
     <>
@@ -158,17 +167,7 @@ export default function Navbar() {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button className="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            {strTime + " - " + date}
           </div>
         </div>
       </nav>

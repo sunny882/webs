@@ -5,7 +5,7 @@ export default function Cards() {
     <div className="row">
       <div className="col-md-6">
         <div className="card border border-light">
-          <h5 className="card-header">Live Kirtan</h5>
+          <h5 className="card-header">Live Kirtan - Harmandir Sahib</h5>
           <div className="card-body">
             <h5 className="card-title">Tap to play</h5>
             <p className="card-text">
