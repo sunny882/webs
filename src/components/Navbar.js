@@ -1,11 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 export default function Navbar() {
+  let nav = useNavigate();
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-light shadow mb-3 w-100 text-start">
+      <nav className="navbar navbar-expand-lg bg-light shadow mb-1 w-100 text-start p-0 pb-2 ">
         <div className="container-fluid">
-          <a className="navbar-brand ps-3 border-end pe-3 border-dark" href="/">
+          <a
+            className="navbar-brand ps-3 border-end pe-3 border-dark"
+            onClick={() => {
+              nav("/");
+            }}
+            href=""
+          >
             SHP
           </a>
           <button
@@ -22,14 +30,21 @@ export default function Navbar() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a
+                  className="nav-link active"
+                  aria-current="page"
+                  onClick={() => {
+                    nav("/");
+                  }}
+                  href=""
+                >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" aria-current="page" to="/Main2">
+                <a className="nav-link" aria-current="page" to="/Main2">
                   Main2
-                </Link>
+                </a>
               </li>
               <li className="nav-item dropdown">
                 <a

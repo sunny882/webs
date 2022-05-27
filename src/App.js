@@ -16,6 +16,7 @@ function App() {
         <Routes>
           <Route path="main2" element={<Main2 />} />
           <Route path="/" element={<Main />} />
+          <Route path="*" element={<Main />} />
         </Routes>
       </Router>
       <Footer />
