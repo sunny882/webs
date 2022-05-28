@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import Main2 from "./components/Main2";
+import G1 from "./components/tg/G1";
+import G2 from "./components/tg/G2";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
         <Routes>
           <Route path="main2" element={<Main2 />} />
           <Route path="/" element={<Main />} />
+          <Route path="/G1" element={<G1 />} />
+          <Route path="/G2" element={<G2 />} />
           <Route path="*" element={<Main />} />
         </Routes>
       </Router>

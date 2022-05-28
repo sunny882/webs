@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   var date = new Date();
@@ -10,7 +10,7 @@ export default function Navbar() {
   hours = hours ? hours : 12; // the hour '0' should be '12'
   minutes = minutes < 10 ? "0" + minutes : minutes;
   var strTime = hours + ":" + minutes + " " + ampm;
-  var date = date.toDateString();
+  var datee = date.toDateString();
   let nav = useNavigate();
   return (
     <>
@@ -21,7 +21,7 @@ export default function Navbar() {
             onClick={() => {
               nav("/");
             }}
-            href=""
+            href="/"
           >
             SHP
           </a>
@@ -45,13 +45,15 @@ export default function Navbar() {
                   onClick={() => {
                     nav("/");
                   }}
-                  href=""
+                  href="/"
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" to="/Main2">
+                <a className="nav-link" href="#" aria-current="page" onClick={() => {
+                  nav("/Main2");
+                }}>
                   Main2
                 </a>
               </li>
@@ -107,14 +109,14 @@ export default function Navbar() {
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <Link className="dropdown-item" to={"/G1"}>
                       1. Guru Nanak Dev Ji
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="/">
+                    <Link className="dropdown-item" to={"/G2"}>
                       2. Guru Angad Dev ji
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="/">
@@ -167,10 +169,10 @@ export default function Navbar() {
                 </ul>
               </li>
             </ul>
-            {strTime + " - " + date}
+            {strTime + " - " + datee}
           </div>
         </div>
-      </nav>
+      </nav >
     </>
   );
 }

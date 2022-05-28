@@ -1,12 +1,12 @@
 import React from "react";
 import Cards from "./Cards";
 import Hukamnama from "./Hukamnama";
-import PanjTakht from "./PanjTakht";
-import { useNavigate } from "react-router-dom";
+// import PanjTakht from "./PanjTakht";
+// import { useNavigate } from "react-router-dom";
 import Nitnem from "./Nitnem";
 
 export default function Main() {
-  let nav = useNavigate();
+  // let nav = useNavigate();
   return (
     <>
       <div className="row gx-1">

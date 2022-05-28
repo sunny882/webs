@@ -9,7 +9,7 @@ export default function Footer() {
           <p class="card-text">
             <input type="email" className="" id="" placeholder="email" />
           </p>
-          <a href="#" class="btn btn-primary">
+          <a class="btn btn-primary">
             Submit
           </a>
         </div>
